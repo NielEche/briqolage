@@ -79,20 +79,20 @@ h1.login-title {
 
 
 .FooterTag .artsec img{
-    width: 80px !important;
-    height: 80px !important;
+    width: 70px !important;
+    height: 70px !important;
     padding:0px 10px 0px 10px !important; 
 }
 
 .FooterTag .fmsec img{
-    width: 112px !important;
-    height: 80px !important;
+    width: 102px !important;
+    height: 70px !important;
     padding:0px 10px 0px 10px !important; 
 }   
 
 .FooterTag .instasec img{
-    width: 80px !important;
-    height: 80px !important;
+    width: 70px !important;
+    height: 70px !important;
     padding:0px 10px 0px 10px !important; 
 }
 
@@ -182,10 +182,4 @@ max-width: 120px;
 
 .flex-container{
     display: flex !important;
-}
-
-/* General styling */
-
-.padding-m {
-    padding: 5rem;
 }

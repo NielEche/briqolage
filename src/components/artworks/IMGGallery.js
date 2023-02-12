@@ -8,12 +8,15 @@ import { grey } from '@mui/material/colors';
 import ImageList from '@mui/material/ImageList'
 import ImageListItem from '@mui/material/ImageListItem'
 import ImageListItemBar from '@mui/material/ImageListItemBar'
+import Box from '@mui/material/Box';
 
 import './img-gallery.css'
 
 const IMGGallery = (props) => {
   const [slideNumber, setSlideNumber] = useState(0)
   const [openModal, setOpenModal] = useState(false)
+
+  const FavouriteComponent = props.favouriteComponent;
 
   
   const handleOpenModal = (index) => {
@@ -111,9 +114,10 @@ const IMGGallery = (props) => {
                   </div>
                    <ImageListItemBar
                    subtitle={galleryTitle} />
-                    <GreyButton className='btnPrev'  onClick={() => props.handleFavouritesClick(slide)}  sx={{position: 'absolute', border: 2, borderRadius: 10, color: 'black', fontSize: 6, fontWeight: 'bold', px: 1, mt: 1, borderColor: 'black'}} size="small" variant="contained">
-                        Favourite
-                    </GreyButton>
+                   
+                    <Box onClick={() => props.handleFavouritesClick(slide)}  sx={{position: 'absolute',  color: 'black', fontWeight: 'bold', px: 1, mt: 1}} size="small" variant="contained">
+                      <FavouriteComponent />
+                    </Box>
                    </ImageListItem>
              
                    
