@@ -133,7 +133,7 @@ export default function About() {
           
           </DialogTitle>
           
-          <DialogContent>
+          <DialogContent className='DIALOGRESIZE'>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
               <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
                 <Tab sx={{ color: 'gray', fontSize: 13, fontWeight: 'bold' }} label="About Briqolage" {...a11yProps(0)} />

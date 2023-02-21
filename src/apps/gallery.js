@@ -64,6 +64,9 @@ export default function Gallery() {
   const handleClose = () => {
     setOpen(false);
   };
+  
+
+  
 
 
   return (
@@ -71,7 +74,7 @@ export default function Gallery() {
       <Button className='artsec' onClick={handleClickOpen}>
        
         <Tooltip title="Briq Art">
-          <img  label="briq ART" src="https://res.cloudinary.com/nieleche/image/upload/v1674823099/art_xdauuc.png"  width={120} height={120}  />
+          <img  label="briq ART" src="https://res.cloudinary.com/nieleche/image/upload/v1676945963/art_s9ina0.png"  width={150} height={150}  />
         </Tooltip>
       </Button>
 
@@ -124,7 +127,7 @@ export default function Gallery() {
           
           </DialogTitle>
           
-          <DialogContent >
+          <DialogContent className='DIALOGRESIZE'>
             <Box sx={{ borderBottom: 2, borderColor: 'black' }}>
             </Box>
               

@@ -158,7 +158,7 @@ export default function Favourite() {
           
           </DialogTitle>
           
-          <DialogContent>
+          <DialogContent className='DIALOGRESIZE'>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
               <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
                 <Tab sx={{ color: 'gray', fontSize: 13, fontWeight: 'bold' }} label="Art" {...a11yProps(0)} />

@@ -134,7 +134,7 @@ export default function Insta() {
             
             </DialogTitle>
           
-          <DialogContent>
+          <DialogContent className='DIALOGRESIZE'>
             <Box sx={{ borderBottom: 2, borderTop: 2, borderColor: 'black', display: 'flex', justifyContent: 'space-between', p: 2}}>
                 <img src="https://res.cloudinary.com/nieleche/image/upload/v1671988936/Instagram_logo.svg_hj7wtg.png"  width={100} height={36} alt="insta"/>
                 <ColorButton href="https://www.instagram.com/uzzzoma/" target="_blank" sx={{ border: 2, borderRadius: 10, color: 'black', fontSize: 12, fontWeight: 'bold', px: 3,  borderColor: 'black'}} size="small" variant="contained">FOLLOW</ColorButton>

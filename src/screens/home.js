@@ -8,7 +8,6 @@ import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import IconButton from '@mui/material/IconButton';
-import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
@@ -20,6 +19,8 @@ import Insta from '../apps/insta';
 import Help from '../apps/help';
 import Favourite from '../apps/favourite';
 import Search from '../apps/search';
+import Draggable from 'react-draggable';
+
 
 const Home = ({ session }) =>  {
   const [loading, setLoading] = useState(true)
@@ -228,32 +229,52 @@ const Home = ({ session }) =>  {
                 </li>
             </ul>
         </div>
-
-     
       </Box>
 
       <div>
         <div id="title-container">
           <div className="flex-container">
               <div>
-                <Gallery/>
+                  <Draggable>
+                    <div className="drag-wrapper">
+                      <Gallery/>
+                    </div>
+                  </Draggable>
               </div>
 
               <div className="aboutimage">
-                <About/>
+                  <Draggable>
+                    <div className="drag-wrapper">
+                        <About/>
+                    </div>
+                  </Draggable>
               </div>
           </div>
           
           <div>
-              <Music />
+            <Draggable>
+              <div className="drag-wrapper">
+                <Music />
+              </div>
+            </Draggable>
           </div>
+
+
           <div>
-            <Insta />
+            <Draggable>
+              <div className="drag-wrapper">
+                <Insta />
+              </div>
+            </Draggable>
           </div>
         </div>
 
-        <div className="fav-container">
-          <Favourite />
+        <div className="fav-container"> 
+          <Draggable>
+          <div className="drag-wrapper">
+              <Favourite />
+          </div>
+          </Draggable>
         </div>
 
       </div>

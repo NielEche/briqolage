@@ -126,7 +126,7 @@ export default function Help() {
           
           </DialogTitle>
           
-          <DialogContent>
+          <DialogContent  className='DIALOGRESIZE'>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
               <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
                 <Tab sx={{ color: 'gray', fontSize: 13, fontWeight: 'bold' }} label="Help & Contact Us" {...a11yProps(0)} />

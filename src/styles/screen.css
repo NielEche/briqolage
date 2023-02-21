@@ -183,3 +183,13 @@ max-width: 120px;
 .flex-container{
     display: flex !important;
 }
+
+
+
+.DIALOGRESIZE {
+    width: 100%;
+    height: 100%;
+    padding: 0rem;
+    resize: both !important;
+    overflow: auto !important;
+}

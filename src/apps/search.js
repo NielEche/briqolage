@@ -58,7 +58,7 @@ export default function Search() {
 
         <AppContainer>
        
-          <DialogContent>
+          <DialogContent className='DIALOGRESIZE'>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <SearchResult className="ArtworksCon" />
             </Box>
