@@ -16,7 +16,7 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import '../styles/screen.css';
 
-import Favourites from '../components/favourite/RemoveFavourites'
+import Favourites from '../components/favourite/favourites'
 
 function PaperComponent(props) {
   return (

@@ -48,10 +48,6 @@ const Artworks = () => {
   }, [getArtworkImages])
 
 
-  
-
-
-
   // only run once the first time this component is rendered
   useEffect(() => {
 		const ArtFavourites = JSON.parse(
@@ -92,7 +88,7 @@ const Artworks = () => {
      <FAVGallery
         artworkImages={favourites}
         handleFavouritesClick={removeFavouriteArt}
-        />
+      />
     </div>
     </>
   )

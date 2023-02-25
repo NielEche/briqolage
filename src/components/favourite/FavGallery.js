@@ -5,10 +5,11 @@ import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import { pink } from '@mui/material/colors';
 import { green } from '@mui/material/colors';
-import { grey } from '@mui/material/colors';
 import ImageList from '@mui/material/ImageList'
 import ImageListItem from '@mui/material/ImageListItem'
 import ImageListItemBar from '@mui/material/ImageListItemBar'
+import SetFavourite from './set-favourites';
+import Box from '@mui/material/Box';
 
 import '../artworks/img-gallery.css'
 
@@ -35,14 +36,6 @@ const FAVGallery = (props) => {
     backgroundColor: green[500],
     '&:hover': {
       backgroundColor: green[700],
-    },
-  }));
-
-  const GreyButton = styled(Button)(({ theme }) => ({
-    color: theme.palette.getContrastText(grey[500]),
-    backgroundColor: grey[500],
-    '&:hover': {
-      backgroundColor: grey[700],
     },
   }));
 
@@ -113,9 +106,11 @@ const FAVGallery = (props) => {
                         <img src={`${galleryImage}`} alt='' />
                     </div>
                    
-                    <GreyButton className='btnPrev'  onClick={() => props.handleFavouritesClick(slide)}  sx={{position: 'absolute', border: 2, borderRadius: 10, color: 'black', fontSize: 8, fontWeight: 'bold', px: 1, mt: 1, borderColor: 'black'}} size="small" variant="contained">
-                        Remove
-                    </GreyButton>
+                    <Box sx={{position: 'absolute',  color: 'black', fontWeight: 'bold', px: 1, mt: 1}} size="small" variant="contained">
+                      <SetFavourite 
+                        artworkData={slide}
+                      />
+                    </Box>
                   
                 </ImageListItem>
                 )

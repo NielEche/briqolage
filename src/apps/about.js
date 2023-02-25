@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styledd from "styled-components";
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
@@ -15,6 +15,8 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import '../styles/screen.css';
+
+import Contentful from '../utils/contentful'
 
 function PaperComponent(props) {
   return (
@@ -77,6 +79,29 @@ export default function About() {
     setOpen(false);
   };
 
+  const query = `
+    {
+      aboutPageCollection {
+        items {
+          content
+        }
+      }
+    }
+  `
+
+  const [aboutPageContent, setAboutPageContent] = useState('')
+
+  useEffect(() => {
+    Contentful.get(query)
+      .then(({ data, errors }) => {
+        if (errors) {
+          console.error(errors);
+        }
+
+        // rerender the entire component with new data
+        setAboutPageContent(data.aboutPageCollection.items[0].content);
+      });
+  }, []);
 
   return (
     <div>
@@ -143,14 +168,8 @@ export default function About() {
               
                 <Typography  variant="body2" gutterBottom sx={{
                     width: '100%',
-
                 }}>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                 the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                  of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                   but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
-                    in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                     with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                  {aboutPageContent}
                 </Typography>
 
             

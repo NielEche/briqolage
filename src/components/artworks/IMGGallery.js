@@ -9,6 +9,7 @@ import ImageList from '@mui/material/ImageList'
 import ImageListItem from '@mui/material/ImageListItem'
 import ImageListItemBar from '@mui/material/ImageListItemBar'
 import Box from '@mui/material/Box';
+import SetFavourite from '../favourite/set-favourites';
 
 import './img-gallery.css'
 
@@ -16,9 +17,8 @@ const IMGGallery = (props) => {
   const [slideNumber, setSlideNumber] = useState(0)
   const [openModal, setOpenModal] = useState(false)
 
-  const FavouriteComponent = props.favouriteComponent;
 
-  
+
   const handleOpenModal = (index) => {
     setSlideNumber(index)
     setOpenModal(true)
@@ -115,8 +115,10 @@ const IMGGallery = (props) => {
                    <ImageListItemBar
                    subtitle={galleryTitle} />
                    
-                    <Box onClick={() => props.handleFavouritesClick(slide)}  sx={{position: 'absolute',  color: 'black', fontWeight: 'bold', px: 1, mt: 1}} size="small" variant="contained">
-                      <FavouriteComponent />
+                    <Box sx={{position: 'absolute',  color: 'black', fontWeight: 'bold', px: 1, mt: 1}} size="small" variant="contained">
+                      <SetFavourite 
+                        artworkData={slide}
+                      />
                     </Box>
                    </ImageListItem>
              
